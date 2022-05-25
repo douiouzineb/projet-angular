@@ -1,0 +1,32 @@
+<div class=" d-flex justify-content-center" style="padding-top: 150px;">
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+
+
+        <!-- mail input -->
+
+        <div class="form-outline mb-4">
+
+            <label class="form-label" for="mail">mail address</label>
+
+            <input type="email" id="email" name="email" formControlName="email" class="form-control" />
+
+
+        </div>
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+
+            <label class="form-label" for="password">Password</label>
+
+            <input type="password" id="password" name="password" formControlName="password" class="form-control" />
+
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block mb-4" [disabled]="loginForm.invalid">Sign in</button>
+
+        <button type="button" class="btn btn-danger btn-block mb-4" (click)="onClickBtn()">Sign up</button>
+
+    </form>
+
+</div>
